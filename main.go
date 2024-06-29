@@ -1,16 +1,11 @@
 package main
 
 import (
-	"fmt"
-	"playground/iteration"
-	"reflect"
+	"os"
+	"playground/mocking"
 )
 
 func main() {
-	result := iteration.Repeat("a", 5)
-
-	typeOf := reflect.TypeOf(result)
-
-	fmt.Println(typeOf)
-
+	sleeper := &mocking.DefaultSleeper{}
+	mocking.Countdown(os.Stdout, sleeper)
 }
