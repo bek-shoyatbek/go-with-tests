@@ -3,10 +3,10 @@ package main
 import (
 	"log"
 	"net/http"
-	httpserver "playground/http-server"
+	json_server "playground/json-server"
 )
 
 func main() {
-	server := &httpserver.PlayerServer{Store: httpserver.NewInMemoryPlayerStore()}
+	server := &json_server.PlayerServer{Store: json_server.NewInMemoryPlayerStore()}
 	log.Fatal(http.ListenAndServe(":5000", server))
 }
