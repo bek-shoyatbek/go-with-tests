@@ -36,5 +36,5 @@ func testName(t time.Time) string {
 }
 
 func secondsInRadians(t time.Time) float64 {
-	return math.Pi
+	return (math.Pi / (30 / (float64(t.Second()))))
 }
